@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Quality Fragrâncias | Difusores de Ambiente Premium 250ml</title>
+  <meta name="description" content="Transforme sua casa em um refúgio de elegância, conforto e sofisticação. Difusores de aromas Clean Quality 250ml com fragrâncias exclusivas de Bamboo e Chá Branco.">
+  <meta name="keywords" content="Clean Quality, difusor de aromas, fragrâncias de ambiente, aromatizador premium, difusor bamboo, difusor chá branco, perfumaria para casa, Felipe Queiros">
+  <meta name="author" content="Clean Quality Fragrâncias">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Clean Quality Fragrâncias | Mais que um aroma, uma experiência.">
+  <meta property="og:description" content="Difusores de ambiente de alta durabilidade e design decorativo premium. Descubra nossas fragrâncias Bamboo e Chá Branco.">
+  <meta property="og:image" content="assets/images/hero_difusor.jpg">
+  
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23C5A059'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="container announcement-content">
+      <div class="announcement-item">
+        <span class="badge-gold">EXCLUSIVIDADE</span>
+        <span>✨ Parcele em até 3x sem juros</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Clean Quality Home Fragrances">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 80 50" class="cq-monogram" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Interlocking Elegant CQ Monogram -->
+            <path d="M 28 12 C 16 12 8 20 8 30 C 8 40 17 48 29 48 C 37 48 44 43 47 37" stroke="url(#goldGradLogo)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 44 14 C 34 14 26 21 26 31 C 26 41 34 48 45 48 C 55 48 64 41 64 31 C 64 21 55 14 44 14 Z" stroke="url(#goldGradLogo)" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M 40 37 L 54 49" stroke="url(#goldGradLogo)" stroke-width="3" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="goldGradLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#EED59B"/>
+                <stop offset="50%" stop-color="#C5A059"/>
+                <stop offset="100%" stop-color="#9E7632"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">CLEAN QUALITY</span>
+          <span class="brand-sub">HOME FRAGRANCES</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav" aria-label="Navegação Principal">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#fragrancias" class="nav-link">Fragrâncias</a>
+        <a href="#beneficios" class="nav-link">Diferenciais</a>
+        <a href="#como-funciona" class="nav-link">Como Usar</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#faq" class="nav-link">Dúvidas</a>
+      </nav>
+
+      <!-- CTA Button in Header -->
+      <div class="header-actions">
+        <a href="#" class="btn btn-gold-header" onclick="openQuickBuy('bamboo'); return false;">
+          <svg class="icon-cart" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span>COMPRAR AGORA</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu mobile" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <span class="drawer-title">Clean Quality</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Fechar menu">✕</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-link">Início</a>
+        <a href="#sobre" class="mobile-link">Sobre a Marca</a>
+        <a href="#fragrancias" class="mobile-link">Nossas Fragrâncias</a>
+        <a href="#beneficios" class="mobile-link">Por que Escolher</a>
+        <a href="#como-funciona" class="mobile-link">Como Funciona</a>
+        <a href="#depoimentos" class="mobile-link">Avaliações</a>
+        <a href="#faq" class="mobile-link">Dúvidas Frequentes</a>
+      </nav>
+      <div class="drawer-cta">
+        <a href="#" class="btn btn-gold w-full text-center" onclick="closeDrawer(); openQuickBuy('bamboo'); return false;">
+          ESCOLHER MEU AROMA
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <!-- Hero Text Column -->
+        <div class="hero-content">
+          <div class="tag-subheading">
+            <span class="tag-line"></span>
+            <span class="tag-text">AROMAS QUE FAZEM BEM</span>
+          </div>
+
+          <h1 class="hero-title">
+            Mais que um aroma,<br>
+            <span class="title-highlight">uma experiência.</span>
+          </h1>
+
+          <p class="hero-description">
+            Difusores de ambiente Clean Quality de 250ml. Transforme sua casa em um lugar mais acolhedor, elegante, memorável e com identidade única.
+          </p>
+
+          <!-- 4 Pillars Feature Badges -->
+          <div class="hero-features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              </div>
+              <div class="feature-text">
+                <strong>Fragrâncias Exclusivas</strong>
+                <span>Notas selecionadas</span>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="feature-text">
+                <strong>Para Todos os Ambientes</strong>
+                <span>Salas, quartos e lavabos</span>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div class="feature-text">
+                <strong>Sofisticação em Detalhes</strong>
+                <span>Design que decora</span>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="14" rx="2"/><path d="M12 8v14"/><path d="M19 12H5"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+              </div>
+              <div class="feature-text">
+                <strong>Ideal Para Presente</strong>
+                <span>Embalagem nobre</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#fragrancias" class="btn btn-gold btn-hero-cta pulse-subtle">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              <span>CONHEÇA NOSSAS FRAGRÂNCIAS</span>
+              <svg class="arrow-right" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            
+            <a href="#sobre" class="btn-outline-light">
+              <span>Nossa Filosofia</span>
+            </a>
+          </div>
+
+          <div class="hero-subcaption">
+            <span class="line-dot"></span>
+            <span class="subcaption-text">Sinta a diferença que um bom aroma pode fazer no seu dia.</span>
+          </div>
+        </div>
+
+        <!-- Hero Image Presentation -->
+        <div class="hero-image-wrapper">
+          <div class="image-frame-luxury">
+            <img src="assets/images/hero_difusor.jpg" alt="Difusor Clean Quality 250ml Âmbar com Tampa Dourada" class="hero-img" loading="eager">
+            <div class="floating-badge-glass">
+              <span class="badge-title">Frasco 250 ml</span>
+              <span class="badge-desc">Vidro Âmbar & Varetas Pretas</span>
+            </div>
+            <div class="floating-tag-quote">
+              <p>“Detalhes que transformam ambientes.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP / BENEFIT BAR -->
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div class="trust-info">
+            <h4>ENVIO PARA TODO O BRASIL</h4>
+            <p>Entrega rápida, segura e rastreada</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="trust-info">
+            <h4>COMPRA SEGURA E PROTEGIDA</h4>
+            <p>Seus dados 100% criptografados</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <div class="trust-info">
+            <h4>PAGAMENTO FACILITADO</h4>
+            <p>Cartão até 3x sem juros ou PIX</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="trust-info">
+            <h4>ATENDIMENTO PERSONALIZADO</h4>
+            <p>Consultoria olfativa para seu espaço</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: SOBRE A CLEAN QUALITY -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Text Content -->
+          <div class="about-content">
+            <div class="tag-subheading tag-dark">
+              <span class="tag-line gold-line"></span>
+              <span class="tag-text">SOBRE NÓS</span>
+            </div>
+
+            <h2 class="section-title text-dark">
+              A Clean Quality
+            </h2>
+
+            <h3 class="about-subtitle">
+              Acreditamos que pequenos detalhes fazem uma grande diferença.
+            </h3>
+
+            <p class="about-paragraph">
+              A <strong>Clean Quality</strong> nasceu da paixão por ambientes bem cuidados e da vontade de levar mais bem-estar para a vida das pessoas através de fragrâncias sofisticadas, que transformam qualquer espaço em um refúgio de paz.
+            </p>
+
+            <p class="about-paragraph">
+              Nossos difusores de ambiente são desenvolvidos com ingredientes selecionados, unindo qualidade, design elegante e alta durabilidade, para que você possa viver experiências únicas e acolhedoras todos os dias.
+            </p>
+
+            <div class="about-quote-box">
+              <p>“Não vendemos apenas um difusor; criamos uma assinatura olfativa que acolhe quem você ama e valoriza a sua casa.”</p>
+              <span class="quote-author">— Felipe Queiros, Fundador da Clean Quality</span>
+            </div>
+
+            <div class="about-action">
+              <a href="#fragrancias" class="btn btn-outline-gold">
+                <span>CONHEÇA AS FRAGRÂNCIAS</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mosaic Media Grid -->
+          <div class="about-mosaic">
+            <div class="mosaic-top">
+              <div class="mosaic-card-large">
+                <img src="assets/images/hero_difusor.jpg" alt="Ambiente decorado com difusor Clean Quality" loading="lazy">
+                <div class="mosaic-overlay-text">
+                  <span>AMBIENTES MAIS ACOLHEDORES, ELEGANTES E MEMORÁVEIS.</span>
+                </div>
+              </div>
+            </div>
+            <div class="mosaic-bottom">
+              <div class="mosaic-card-small">
+                <img src="assets/images/detail_collar.jpg" alt="Acabamento dourado nobre da tampa Clean Quality" loading="lazy">
+                <div class="badge-subtle-gold">Acabamento 24k Gold Collar</div>
+              </div>
+              <div class="mosaic-card-quote">
+                <img src="assets/images/detail_leaves.jpg" alt="Folhagens e sofisticação botânica" class="bg-card-quote" loading="lazy">
+                <div class="quote-content-dark">
+                  <blockquote>“Aroma é memória.”</blockquote>
+                  <span class="brand-signature">CLEAN QUALITY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Pillars Section Below About -->
+        <div class="pillars-container">
+          <div class="pillar-card">
+            <div class="pillar-icon-circle">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h4>QUALIDADE</h4>
+            <p>Ingredientes selecionados e alta durabilidade de fixação contínua no ar.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-circle">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h4>SOFISTICAÇÃO</h4>
+            <p>Design elegante com frasco de vidro nobre que decora e enobrece o ambiente.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-circle">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h4>BEM-ESTAR</h4>
+            <p>Aromas que trazem mais leveza, equilíbrio, calma e aconchego para o dia a dia.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-circle">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h4>CONFIANÇA</h4>
+            <p>Uma marca autêntica e transparente, que se preocupa minuciosamente com cada detalhe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: NOSSAS FRAGRÂNCIAS (PRODUCT SHOWCASE / HIGH CONVERSION) -->
+    <section class="fragrances-section" id="fragrancias">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-center">
+          <div class="tag-subheading tag-dark center-tag">
+            <span class="tag-line gold-line"></span>
+            <span class="tag-text">NOSSAS FRAGRÂNCIAS</span>
+            <span class="tag-line gold-line"></span>
+          </div>
+          <h2 class="section-title text-dark">
+            Escolha o aroma que combina com você.
+          </h2>
+          <p class="section-subtitle-text">
+            Fragrâncias exclusivas de 250ml desenvolvidas com matérias-primas nobres para perfumar de forma suave, elegante e constante.
+          </p>
+          <div class="luxury-badge-pill">
+            <span>MESMA QUALIDADE PREMIUM • DIFERENTES SENSAÇÕES</span>
+          </div>
+        </div>
+
+        <!-- Products Showcase Cards -->
+        <div class="products-grid">
+          <!-- CARD 1: BAMBOO -->
+          <div class="product-card" id="card-bamboo">
+            <div class="card-ribbon">Mais Vendido</div>
+            
+            <div class="product-media">
+              <img src="assets/images/fragrance_bamboo.jpg" alt="Difusor de Ambiente Bamboo Clean Quality 250ml" class="product-img">
+              <div class="fragrance-mood-badge">
+                <span>🍃 Frescor & Elegância</span>
+              </div>
+            </div>
+
+            <div class="product-content">
+              <div class="product-header-info">
+                <span class="product-category">DIFUSOR DE AMBIENTE • 250 ML</span>
+                <h3 class="product-title">Bamboo</h3>
+              </div>
+
+              <p class="product-description">
+                <strong>Fresco, elegante e sofisticado.</strong> Uma fragrância que transmite sensação instantânea de leveza, natureza e ambiente impecavelmente bem cuidado. Sabe aquele cheiro de hotel 5 estrelas quando você entra no lobby? Essa é a sensação do Bamboo.
+              </p>
+
+              <!-- Olfactory Notes Pills -->
+              <div class="olfactory-pills">
+                <span class="pill">Frescor Verde</span>
+                <span class="pill">Toque Floral Suave</span>
+                <span class="pill">Notas Aquáticas</span>
+                <span class="pill">Madeira Leve</span>
+              </div>
+
+              <div class="ideal-for-box">
+                <strong>Ideal para:</strong> Salas de estar, halls de entrada, lavabos e clínicas.
+              </div>
+
+              <div class="product-price-row">
+                <div class="price-block">
+                  <span class="old-price">De R$ 119,90</span>
+                  <div class="current-price">
+                    <span class="currency">R$</span>
+                    <span class="price-val">89</span><span class="price-cents">,90</span>
+                  </div>
+                  <span class="installment-text">ou 3x de R$ 29,96 sem juros</span>
+                </div>
+
+                <div class="stock-indicator">
+                  <span class="pulse-green"></span>
+                  <span>Em estoque</span>
+                </div>
+              </div>
+
+              <div class="product-card-actions">
+                <a href="#" class="btn btn-gold btn-full" onclick="openQuickBuy('bamboo'); return false;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  <span>COMPRAR BAMBOO</span>
+                </a>
+              </div>
+
+              <div class="product-includes">
+                <span>✓ Frasco de vidro 250ml + Conjunto de varetas pretas de alta absorção</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2: CHÁ BRANCO -->
+          <div class="product-card" id="card-cha-branco">
+            <div class="card-ribbon ribbon-silver">Aconchego & Paz</div>
+            
+            <div class="product-media">
+              <img src="assets/images/fragrance_white_tea.jpg" alt="Difusor de Ambiente Chá Branco Clean Quality 250ml" class="product-img">
+              <div class="fragrance-mood-badge">
+                <span>🌸 Refinamento & Conforto</span>
+              </div>
+            </div>
+
+            <div class="product-content">
+              <div class="product-header-info">
+                <span class="product-category">DIFUSOR DE AMBIENTE • 250 ML</span>
+                <h3 class="product-title">Chá Branco</h3>
+              </div>
+
+              <p class="product-description">
+                <strong>Leve, delicado e acolhedor.</strong> Uma fragrância sofisticada formulada para criar uma atmosfera tranquila, relaxante e extremamente agradável.
+              </p>
+
+              <!-- Olfactory Notes Pills -->
+              <div class="olfactory-pills">
+                <span class="pill">Chá Branco Puro</span>
+                <span class="pill">Cítrico Sutil</span>
+                <span class="pill">Flor de Lótus</span>
+                <span class="pill">Fundo Amadeirado</span>
+              </div>
+
+              <div class="ideal-for-box">
+                <strong>Ideal para:</strong> Quartos, escritórios, consultórios e momentos de relaxamento.
+              </div>
+
+              <div class="product-price-row">
+                <div class="price-block">
+                  <span class="old-price">De R$ 119,90</span>
+                  <div class="current-price">
+                    <span class="currency">R$</span>
+                    <span class="price-val">89</span><span class="price-cents">,90</span>
+                  </div>
+                  <span class="installment-text">ou 3x de R$ 29,96 sem juros</span>
+                </div>
+
+                <div class="stock-indicator">
+                  <span class="pulse-green"></span>
+                  <span>Em estoque</span>
+                </div>
+              </div>
+
+              <div class="product-card-actions">
+                <a href="#" class="btn btn-gold btn-full" onclick="openQuickBuy('cha-branco'); return false;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  <span>COMPRAR CHÁ BRANCO</span>
+                </a>
+              </div>
+
+              <div class="product-includes">
+                <span>✓ Frasco de vidro 250ml + Conjunto de varetas pretas de alta absorção</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SPECIAL COMBO DUO OFFER (HIGH AOV BUNDLE) -->
+        <div class="combo-bundle-card">
+          <div class="combo-badge-top">MELHOR CUSTO-BENEFÍCIO & EXPERIÊNCIA COMPLETA</div>
+          <div class="combo-content-grid">
+            <div class="combo-image-col">
+              <img src="assets/images/box_packaging.jpg" alt="Kit Combo Duo Clean Quality Fragrâncias com Caixa de Presente" class="combo-img" loading="lazy">
+            </div>
+            <div class="combo-details-col">
+              <div class="combo-smart-badge">👑 A Escolha Mais Inteligente</div>
+              <span class="combo-tag">COMBO DUO EXCLUSIVO</span>
+              <h3 class="combo-title">Kit 2 Difusores (Bamboo + Chá Branco)</h3>
+              <p class="combo-desc">
+                Experimente o frescor energizante do Bamboo nas áreas sociais e o aconchego sereno do Chá Branco nos quartos ou escritório.
+              </p>
+              
+              <ul class="combo-benefits-list">
+                <li><span>✨</span> 1x Difusor Bamboo 250ml + Varetas Pretas</li>
+                <li><span>✨</span> 1x Difusor Chá Branco 250ml + Varetas Pretas</li>
+                <li><span>🎁</span> Embalagem premium especial para presente</li>
+              </ul>
+
+              <div class="combo-price-block">
+                <div class="combo-prices">
+                  <span class="old-price">De R$ 239,80</span>
+                  <div class="current-price combo-price-highlight">
+                    <span class="currency">R$</span>
+                    <span class="price-val">169</span><span class="price-cents">,90</span>
+                  </div>
+                  <span class="combo-unit-price-anchor">Neste combo, cada difusor sai por apenas R$ 84,95</span>
+                  <span class="economy-tag">Economize R$ 69,90</span>
+                </div>
+                
+                <a href="#" class="btn btn-gold btn-combo-cta" onclick="openQuickBuy('combo-duo'); return false;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  <span>QUERO O COMBO DUO</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: BENEFÍCIOS (MUITO MAIS QUE UM DIFUSOR) -->
+    <section class="benefits-section" id="beneficios">
+      <div class="container">
+        <div class="benefits-layout-grid">
+          <!-- Text and Grid of 6 Icons -->
+          <div class="benefits-left">
+            <div class="tag-subheading">
+              <span class="tag-line gold-line"></span>
+              <span class="tag-text">BENEFÍCIOS EXCLUSIVOS</span>
+            </div>
+
+            <h2 class="section-title text-white">
+              Muito mais<br>que um difusor.
+            </h2>
+
+            <p class="benefits-lead-text">
+              A Clean Quality une sofisticação, bem-estar e matérias-primas de alta qualidade em cada detalhe, para transformar o seu ambiente em uma experiência inesquecível.
+            </p>
+
+            <div class="benefits-grid-icons">
+              <div class="benefit-box">
+                <div class="benefit-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                </div>
+                <div class="benefit-copy">
+                  <h4>Fragrâncias Exclusivas</h4>
+                  <p>Desenvolvidas para diferentes momentos, sensações e estilos de vida.</p>
+                </div>
+              </div>
+
+              <div class="benefit-box">
+                <div class="benefit-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="benefit-copy">
+                  <h4>Perfume Contínuo</h4>
+                  <p>Aromatização constante através das varetas, sem precisar borrifar toda hora.</p>
+                </div>
+              </div>
+
+              <div class="benefit-box">
+                <div class="benefit-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div class="benefit-copy">
+                  <h4>Para Todos os Espaços</h4>
+                  <p>Perfeito para sala, quarto, escritório, consultórios e lavabo.</p>
+                </div>
+              </div>
+
+              <div class="benefit-box">
+                <div class="benefit-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+                <div class="benefit-copy">
+                  <h4>Sofisticação em Detalhes</h4>
+                  <p>Design minimalista e elegante que eleva a decoração do ambiente.</p>
+                </div>
+              </div>
+
+              <div class="benefit-box">
+                <div class="benefit-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="14" rx="2"/><path d="M12 8v14"/><path d="M19 12H5"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+                </div>
+                <div class="benefit-copy">
+                  <h4>Ideal para Presente</h4>
+                  <p>Beleza, sofisticação e bem-estar em uma escolha inesquecível.</p>
+                </div>
+              </div>
+
+              <div class="benefit-box">
+                <div class="benefit-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div class="benefit-copy">
+                  <h4>Mais Bem-Estar Diário</h4>
+                  <p>Ambientes mais leves, acolhedores, inspiradores e memoráveis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Feature Highlight Side -->
+          <div class="benefits-right">
+            <div class="benefit-img-frame">
+              <img src="assets/images/step_03.jpg" alt="Difusor Clean Quality em sala elegante" class="benefit-showcase-img" loading="lazy">
+              <div class="benefit-floating-card">
+                <div class="quote-stars">★★★★★</div>
+                <p>“Pequenos detalhes, grandes sensações.”</p>
+                <span>CLEAN QUALITY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: COMO FUNCIONA (EXPERIÊNCIA EM 3 PASSOS) -->
+    <section class="how-it-works-section" id="como-funciona">
+      <div class="container">
+        <div class="how-header-row">
+          <div>
+            <div class="tag-subheading tag-dark">
+              <span class="tag-line gold-line"></span>
+              <span class="tag-text">COMO FUNCIONA</span>
+            </div>
+            <h2 class="section-title text-dark">
+              Simples, prático e eficiente.
+            </h2>
+            <p class="how-subtitle">
+              Em poucos passos, você sente o seu ambiente imediatamente mais perfumado, aconchegante e agradável.
+            </p>
+          </div>
+          <div class="how-header-btn">
+            <a href="#fragrancias" class="btn btn-outline-gold">
+              <span>APROVEITE ESSA EXPERIÊNCIA</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-img-box">
+              <img src="assets/images/step_01.jpg" alt="Passo 1: Abrir o difusor Clean Quality" loading="lazy">
+            </div>
+            <div class="step-body">
+              <h3 class="step-title">ABRA</h3>
+              <p class="step-text">Retire o lacre de proteção e a tampa nobre para preparar seu difusor.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-img-box">
+              <img src="assets/images/step_02.jpg" alt="Passo 2: Inserir as varetas de fibra preta" loading="lazy">
+            </div>
+            <div class="step-body">
+              <h3 class="step-title">INSIRA</h3>
+              <p class="step-text">Coloque as varetas de fibra preta no frasco para iniciar a absorção uniforme.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-img-box">
+              <img src="assets/images/step_03.jpg" alt="Passo 3: Perfumar o ambiente" loading="lazy">
+            </div>
+            <div class="step-body">
+              <h3 class="step-title">PERFUME</h3>
+              <p class="step-text">As varetas difundem a fragrância gradativamente, perfumando todo o espaço.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro Tip Card -->
+        <div class="pro-tip-banner">
+          <div class="tip-icon">💡</div>
+          <div class="tip-text">
+            <strong>Dica de Especialista Clean Quality:</strong> Para intensificar a perfumação em ocasiões especiais, vire as varetas a cada 2 ou 3 dias. Posicione o difusor em locais com boa circulação de ar para que o aroma viaje suavemente por todos os cantos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: DEPOIMENTOS / PROVA SOCIAL (QUEM EXPERIMENTA, SENTE A DIFERENÇA) -->
+    <section class="testimonials-section" id="depoimentos">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="tag-subheading tag-dark center-tag">
+            <span class="tag-line gold-line"></span>
+            <span class="tag-text">DEPOIMENTOS</span>
+            <span class="tag-line gold-line"></span>
+          </div>
+          <h2 class="section-title text-dark">
+            Quem experimenta, sente a diferença.
+          </h2>
+          <p class="section-subtitle-text">
+            Nossos clientes compartilham como a Clean Quality transformou a energia e o aconchego de seus lares e espaços de trabalho.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="stars-row">
+              ★★★★★
+            </div>
+            <p class="testimonial-comment">
+              “Aromatizou toda a minha sala! Fragrância maravilhosa e muito elegante. As visitas sempre elogiam quando entram em casa. Já quero experimentar o Chá Branco também!”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-1">JS</div>
+              <div class="author-meta">
+                <strong>Juliana S.</strong>
+                <span>São Paulo - SP • Comprou Difusor Bamboo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="stars-row">
+              ★★★★★
+            </div>
+            <p class="testimonial-comment">
+              “Além de perfumar perfeitamente sem ser enjoativo, o difusor decora o ambiente como uma peça de luxo. A garrafa âmbar com a tampa dourada é linda demais! Entrega super rápida.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-2">RM</div>
+              <div class="author-meta">
+                <strong>Rafael M.</strong>
+                <span>Curitiba - PR • Comprou Combo Duo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="stars-row">
+              ★★★★★
+            </div>
+            <p class="testimonial-comment">
+              “Comprei para presentear minha mãe e ela ficou encantada com o cuidado da embalagem e o perfume do Chá Branco. Produto de altíssima categoria. Super recomendo!”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-3">CR</div>
+              <div class="author-meta">
+                <strong>Camila R.</strong>
+                <span>Rio de Janeiro - RJ • Comprou Chá Branco</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="stars-row">
+              ★★★★★
+            </div>
+            <p class="testimonial-comment">
+              “Já usei várias marcas importadas e nacionais famosas, mas a Clean Quality realmente se destaca. Fixação excelente e aroma na medida certa para o meu consultório.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-4">EL</div>
+              <div class="author-meta">
+                <strong>Dr. Eduardo L.</strong>
+                <span>Belo Horizonte - MG • Comprou Difusor Bamboo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Proof Stats Row -->
+        <div class="stats-proof-bar">
+          <div class="stat-item">
+            <span class="stat-number">+1.200</span>
+            <span class="stat-label">Ambientes Perfumados</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">4.9 / 5.0</span>
+            <span class="stat-label">Avaliação Média dos Clientes</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Índice de Recompra</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Garantia de Satisfação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: POR QUE ESCOLHER A CLEAN QUALITY? (GRID COM IMAGEM) -->
+    <section class="why-choose-section">
+      <div class="container">
+        <div class="why-grid">
+          <!-- Visual Left Banner -->
+          <div class="why-visual">
+            <div class="why-image-card">
+              <img src="assets/images/box_packaging.jpg" alt="Caixa Clean Quality e difusor" class="why-img" loading="lazy">
+              <div class="floating-tag-quote why-visual-quote">
+                <p>“Mais que perfume, é bem-estar.”</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards Right -->
+          <div class="why-content">
+            <div class="tag-subheading">
+              <span class="tag-line gold-line"></span>
+              <span class="tag-text">POR QUE ESCOLHER A CLEAN QUALITY?</span>
+            </div>
+
+            <h2 class="section-title text-white">
+              A escolha certa para quem não abre mão do melhor.
+            </h2>
+
+            <div class="why-features-grid">
+              <div class="why-item">
+                <div class="why-icon">💎</div>
+                <div>
+                  <h4>Qualidade Comprovada</h4>
+                  <p>Ingredientes premium selecionados e alta durabilidade de fixação olfativa.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-icon">🌿</div>
+                <div>
+                  <h4>Aromas Exclusivos</h4>
+                  <p>Fragrâncias marcantes criadas para momentos especiais e relaxamento.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-icon">🏡</div>
+                <div>
+                  <h4>Para Todos os Ambientes</h4>
+                  <p>Sala, quarto, escritório, lavabo e espaços corporativos de alto padrão.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-icon">🎁</div>
+                <div>
+                  <h4>Ideal para Presente</h4>
+                  <p>Beleza, requinte e bem-estar em uma só embalagem refinada.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-icon">🔒</div>
+                <div>
+                  <h4>Compra Segura</h4>
+                  <p>Seus dados 100% protegidos com checkout transparente e seguro.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-icon">🚚</div>
+                <div>
+                  <h4>Envio para Todo o Brasil</h4>
+                  <p>Receba com máxima comodidade, rapidez e cuidado na sua casa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FAQ (DÚVIDAS FREQUENTES) -->
+    <section class="faq-section" id="faq">
+      <div class="container faq-container">
+        <div class="faq-header">
+          <div class="tag-subheading tag-dark center-tag">
+            <span class="tag-line gold-line"></span>
+            <span class="tag-text">DÚVIDAS FREQUENTES</span>
+            <span class="tag-line gold-line"></span>
+          </div>
+          <h2 class="section-title text-dark">
+            Tudo o que você precisa saber.
+          </h2>
+          <p class="section-subtitle-text">
+            Confira as principais perguntas sobre os difusores de ambiente Clean Quality.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true">
+              <span>Quanto tempo dura o difusor de 250ml?</span>
+              <span class="faq-arrow">✕</span>
+            </button>
+            <div class="faq-answer">
+              <p>O difusor de 250ml tem durabilidade média de <strong>45 a 60 dias</strong>. A duração pode variar de acordo com o ambiente, incidência solar direta, ventilação do espaço e frequência de rotação das varetas.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Onde posso usar o difusor Clean Quality?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Em qualquer espaço interno! É perfeito para salas de estar, quartos, closets, halls de entrada, lavabos, escritórios, consultórios, clínicas, salões e recepções de empresas que buscam transmitir sofisticação.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Qual a diferença entre a fragrância Bamboo e a Chá Branco?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>O <strong>Bamboo</strong> possui perfil olfativo fresco, verde e sofisticado, transmitindo leveza, frescor e sensação de limpeza imediata. Já o <strong>Chá Branco</strong> é mais sutil, floral, delicado e aconchegante, ideal para ambientes de descanso, leitura e tranquilidade.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4: GARANTIA DE RISCO ZERO -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>E se eu não gostar do cheiro?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Temos a <strong>Garantia de Risco Zero</strong>. Você pode receber o produto, abrir e sentir a fragrância. Se não se apaixonar pelo aroma, devolvemos 100% do seu dinheiro sem burocracia.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>As varetas já acompanham o produto?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Sim!</strong> Cada difusor acompanha um conjunto completo de varetas pretas de fibra sintética de alta performance, desenvolvidas especialmente para absorver e exalar o aroma continuamente com máxima eficiência.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Como faço para comprar e quais as formas de pagamento?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Você pode clicar em qualquer botão "Comprar Agora" nesta página. Aceitamos PIX com confirmação imediata, cartão de crédito em até 3x sem juros ou boleto bancário através do nosso checkout 100% seguro.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Vocês enviam para todo o Brasil? Como funciona o prazo?</span>
+              <span class="faq-arrow">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim, enviamos com seguro e código de rastreio para todo o território nacional. O prazo de entrega e as opções de envio são calculados diretamente no checkout de acordo com o seu CEP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FINAL CTA BANNER (ALTA CONVERSÃO) -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-box">
+          <div class="final-cta-text">
+            <span class="cta-tag">EXPERIÊNCIA EXCLUSIVA</span>
+            <h2 class="final-cta-title">
+              Leve a experiência Clean Quality para a sua casa.
+            </h2>
+            <p class="final-cta-desc">
+              Difusor de ambiente premium 250 ml. O toque final que transforma o seu espaço em um lugar inesquecível.
+            </p>
+            
+            <div class="final-price-wrapper">
+              <div class="final-price-display">
+                <span class="final-label">Apenas</span>
+                <div class="final-price-val">R$ 89<span class="cents">,90</span></div>
+                <span class="final-installments">em até 3x de R$ 29,96 sem juros</span>
+              </div>
+
+              <div class="final-cta-btn-wrap">
+                <a href="#" class="btn btn-gold btn-large pulse-subtle" onclick="openQuickBuy('bamboo'); return false;">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  <span>QUERO MEU DIFUSOR AGORA</span>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <div class="guarantee-note">
+                  <span>🔒 Compra 100% Segura • Satisfação Garantida ou seu dinheiro de volta</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="final-cta-img-col">
+            <img src="assets/images/hero_difusor.jpg" alt="Difusor Clean Quality 250ml" class="final-prod-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND QUOTE STRIP -->
+    <div class="brand-quote-strip">
+      <div class="container">
+        <p class="quote-text-center">
+          “Cuidar do seu espaço também é cuidar de você.”
+        </p>
+        <span class="quote-brand">CLEAN QUALITY • HOME FRAGRANCES</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top-grid">
+        <!-- Brand Col -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <svg viewBox="0 0 80 50" class="cq-monogram" fill="none" width="60" height="38">
+              <path d="M 28 12 C 16 12 8 20 8 30 C 8 40 17 48 29 48 C 37 48 44 43 47 37" stroke="#EED59B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M 44 14 C 34 14 26 21 26 31 C 26 41 34 48 45 48 C 55 48 64 41 64 31 C 64 21 55 14 44 14 Z" stroke="#EED59B" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M 40 37 L 54 49" stroke="#EED59B" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <span class="footer-brand-name">CLEAN QUALITY</span>
+              <span class="footer-brand-sub">HOME FRAGRANCES</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Aromas que fazem bem. Transforme ambientes. Viva melhores momentos.</p>
+          <div class="founder-credit">
+            <span>Fundada por <strong>Felipe Queiros</strong></span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#sobre">Sobre a Marca</a></li>
+            <li><a href="#fragrancias">Fragrâncias Bamboo & Chá Branco</a></li>
+            <li><a href="#beneficios">Diferenciais</a></li>
+            <li><a href="#como-funciona">Como Usar</a></li>
+            <li><a href="#depoimentos">Avaliações de Clientes</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Fragrances -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Fragrâncias</h4>
+          <ul class="footer-links">
+            <li><a href="#card-bamboo" onclick="openQuickBuy('bamboo'); return false;">Difusor Bamboo 250ml</a></li>
+            <li><a href="#card-cha-branco" onclick="openQuickBuy('cha-branco'); return false;">Difusor Chá Branco 250ml</a></li>
+            <li><a href="#fragrancias" onclick="openQuickBuy('combo-duo'); return false;">Combo Duo (Bamboo + Chá Branco)</a></li>
+            <li><a href="#fragrancias" onclick="openQuickBuy('bamboo'); return false;">Kits para Presente</a></li>
+          </ul>
+        </div>
+
+        <!-- Instagram & Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Acompanhe Nossas Novidades</h4>
+          <a href="https://instagram.com/cleanqualityfragancias" target="_blank" rel="noopener" class="instagram-button">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>@cleanqualityfragancias</span>
+          </a>
+
+          <div class="footer-cta-box">
+            <p>Dúvidas ou encomendas corporativas?</p>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20difusores%20da%20Clean%20Quality!" target="_blank" class="btn-whatsapp-footer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.05 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15M16.57 14.33C16.32 14.2 15.1 13.6 14.88 13.52C14.65 13.43 14.49 13.4 14.32 13.65C14.16 13.9 13.68 14.47 13.54 14.63C13.4 14.79 13.25 14.82 13 14.69C12.75 14.57 11.96 14.31 11.02 13.47C10.29 12.82 9.79 12.01 9.65 11.76C9.51 11.51 9.64 11.38 9.76 11.26C9.88 11.14 10.02 10.95 10.15 10.8C10.28 10.65 10.32 10.54 10.4 10.38C10.49 10.21 10.44 10.07 10.38 9.95C10.32 9.82 9.83 8.62 9.63 8.13C9.43 7.66 9.23 7.72 9.08 7.71H8.61C8.44 7.71 8.18 7.77 7.95 8.02C7.73 8.27 7.08 8.87 7.08 10.1C7.08 11.33 7.98 12.51 8.1 12.68C8.23 12.84 9.87 15.37 12.38 16.45C12.98 16.71 13.44 16.86 13.81 16.98C14.41 17.17 14.96 17.14 15.39 17.08C15.87 17.01 16.87 16.48 17.08 15.91C17.28 15.33 17.28 14.84 17.22 14.74C17.16 14.63 17 14.57 16.75 14.44L16.57 14.33Z"/></svg>
+              <span>Fale com nosso consultor</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Clean Quality Fragrâncias. Todos os direitos reservados. CNPJ sob consulta.</p>
+        <p class="footer-credits">Desenvolvido com foco em alta conversão e sofisticação.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK BUY / CART MODAL -->
+  <div class="modal-overlay" id="quickBuyModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" onclick="closeQuickBuy()" aria-label="Fechar janela">✕</button>
+      
+      <div class="modal-header">
+        <span class="modal-pre-title">EXPERIÊNCIA CLEAN QUALITY</span>
+        <h3 id="modalTitle" class="modal-title">Finalizar Pedido</h3>
+      </div>
+
+      <div class="modal-body">
+        <!-- Selected Item Preview -->
+        <div class="modal-product-summary">
+          <img id="modalProductImg" src="assets/images/fragrance_bamboo.jpg" alt="Produto selecionado" class="modal-thumb">
+          <div class="modal-product-info">
+            <h4 id="modalProductName">Difusor Bamboo 250ml</h4>
+            <span class="modal-product-tag" id="modalProductTag">🍃 Fresco & Sofisticado</span>
+            <div class="modal-price" id="modalProductPrice">R$ 89,90</div>
+          </div>
+        </div>
+
+        <!-- Option Selectors -->
+        <div class="modal-options">
+          <label class="option-label">Escolha sua Fragrância:</label>
+          <div class="fragrance-radio-group">
+            <label class="radio-card" id="label-bamboo">
+              <input type="radio" name="fragranceSelect" value="bamboo" checked onchange="updateModalSelection('bamboo')">
+              <span class="radio-content">
+                <strong>Bamboo (250ml)</strong>
+                <small>Fresco, elegante e limpo • R$ 89,90</small>
+              </span>
+            </label>
+
+            <label class="radio-card" id="label-cha-branco">
+              <input type="radio" name="fragranceSelect" value="cha-branco" onchange="updateModalSelection('cha-branco')">
+              <span class="radio-content">
+                <strong>Chá Branco (250ml)</strong>
+                <small>Delicado, relaxante e aconchegante • R$ 89,90</small>
+              </span>
+            </label>
+
+            <label class="radio-card highlight-radio" id="label-combo-duo">
+              <input type="radio" name="fragranceSelect" value="combo-duo" onchange="updateModalSelection('combo-duo')">
+              <span class="radio-content">
+                <strong>Combo Duo (Bamboo + Chá Branco) 🔥</strong>
+                <small>2 Unidades • R$ 84,95 cada • R$ 169,90</small>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quantity Selector -->
+        <div class="quantity-row">
+          <label class="option-label">Quantidade:</label>
+          <div class="qty-control">
+            <button type="button" class="qty-btn" onclick="changeQty(-1)">-</button>
+            <span class="qty-display" id="modalQty">1</span>
+            <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Total Price Calculation -->
+        <div class="modal-total-box">
+          <div class="total-line">
+            <span>Subtotal:</span>
+            <strong id="modalSubtotal">R$ 89,90</strong>
+          </div>
+          <div class="total-line shipping-line">
+            <span>Frete:</span>
+            <span class="free-shipping-text" id="modalShipping">Calculado no checkout</span>
+          </div>
+          <div class="total-line final-total">
+            <span>Total:</span>
+            <strong id="modalGrandTotal">R$ 89,90</strong>
+          </div>
+        </div>
+
+        <!-- Checkout Buttons -->
+        <div class="modal-actions">
+          <button class="btn btn-gold btn-full btn-modal-buy" onclick="proceedToCheckout('online')">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span>CONCLUIR COMPRA SEGURA</span>
+          </button>
+        </div>
+
+        <div class="modal-trust-footer">
+          <span>🔒 Criptografia SSL • Pagamento Seguro • Envio Garantido</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
