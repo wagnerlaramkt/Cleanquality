@@ -3,34 +3,62 @@
  * Developed for maximum engagement, accessibility and conversion.
  */
 
-// Product Data Catalog
+// Product Data Catalog - 4 Fragrâncias Exclusivas + Combos
 const PRODUCTS = {
   'bamboo': {
     id: 'bamboo',
     name: 'Difusor Bamboo 250ml',
-    tag: '🍃 Fresco, Elegante & Sofisticado',
+    tag: '🍃 Frescor, Natureza & Sofisticação',
     price: 89.90,
     oldPrice: 119.90,
-    image: 'assets/images/fragrance_bamboo.jpg',
-    description: 'Sabe aquele cheiro de hotel 5 estrelas quando você entra no lobby? Essa é a sensação do Bamboo.'
+    image: 'assets/images/card_bamboo.jpg',
+    realImage: 'assets/images/real_product_bamboo.jpg',
+    description: 'Fragrância fresca e envolvente inspirada na natureza. Presença marcante e equilibrada. Sabe aquele cheiro de hotel 5 estrelas quando você entra no lobby? Essa é a sensação do Bamboo.'
   },
   'cha-branco': {
     id: 'cha-branco',
     name: 'Difusor Chá Branco 250ml',
-    tag: '🌸 Delicado, Relaxante & Aconchegante',
+    tag: '🌸 Leveza, Elegância & Tranquilidade',
     price: 89.90,
     oldPrice: 119.90,
-    image: 'assets/images/fragrance_white_tea.jpg',
-    description: 'Fragrância sofisticada formulada para criar uma atmosfera tranquila, relaxante e serena.'
+    image: 'assets/images/card_cha_branco.jpg',
+    description: 'Fragrância delicada e sofisticada, com sensação limpa, fresca e confortável. Transmite cuidado e equilíbrio sem dominar o ambiente.'
+  },
+  'bergamota': {
+    id: 'bergamota',
+    name: 'Difusor Bergamota 250ml',
+    tag: '🍋 Frescor, Energia & Personalidade',
+    price: 89.90,
+    oldPrice: 119.90,
+    image: 'assets/images/card_bergamota.jpg',
+    description: 'Fragrância cítrica, vibrante e elegante. Traz uma sensação refrescante e iluminada ao ambiente, perfeita para quem busca energia e sofisticação.'
+  },
+  'elegance': {
+    id: 'elegance',
+    name: 'Difusor Elegance 250ml',
+    tag: '✨ Sofisticação, Aconchego & Exclusividade',
+    price: 89.90,
+    oldPrice: 119.90,
+    image: 'assets/images/card_elegance.jpg',
+    description: 'Fragrância criada para transmitir a sensação de um ambiente refinado e acolhedor. Notas nobres e envolventes que impressionam com elegância.'
   },
   'combo-duo': {
     id: 'combo-duo',
-    name: 'Combo Duo (Bamboo + Chá Branco 250ml)',
-    tag: '🔥 2 Unidades • R$ 84,95 cada',
+    name: 'Kit 2 Difusores (Escolha seus 2 Aromas)',
+    tag: '👑 2 Unidades • R$ 84,95 cada',
     price: 169.90,
     oldPrice: 239.80,
-    image: 'assets/images/box_packaging.jpg',
-    description: 'O combo perfeito com as duas fragrâncias icônicas e embalagem nobre especial para presente.'
+    image: 'assets/images/catalog_presentation_4.png',
+    description: 'Escolha quaisquer 2 fragrâncias exclusivas da Clean Quality (Bamboo, Chá Branco, Bergamota ou Elegance). Embalagem nobre especial para presente.'
+  },
+  'colecao-4': {
+    id: 'colecao-4',
+    name: 'Coleção Completa (4 Fragrâncias 250ml)',
+    tag: '🔥 4 Unidades • Todos os 4 Aromas',
+    price: 299.90,
+    oldPrice: 479.60,
+    image: 'assets/images/hero_4_fragrancias.png',
+    description: 'A experiência sensorial definitiva com a linha completa: Bamboo + Chá Branco + Bergamota + Elegance 250ml com varetas pretas de alta absorção.'
   }
 };
 
@@ -244,6 +272,16 @@ function updateModalSelection(productId) {
   if (tagEl) tagEl.textContent = product.tag;
   if (priceEl) priceEl.textContent = formatBRL(product.price);
 
+  // Toggle combo aroma customizer visibility
+  const customizer = document.getElementById('comboCustomizer');
+  if (customizer) {
+    if (productId === 'combo-duo') {
+      customizer.style.display = 'block';
+    } else {
+      customizer.style.display = 'none';
+    }
+  }
+
   // Update active radio style
   document.querySelectorAll('.radio-card').forEach(card => {
     card.classList.remove('active');
@@ -292,11 +330,23 @@ function proceedToCheckout(type = 'online') {
   const product = PRODUCTS[currentSelectedProduct];
   const total = (product.price * currentQty).toFixed(2).replace('.', ',');
 
-  // Placeholder checkout redirection - configure Yampi checkout URLs when ready
+  let aromaDetails = '';
+  if (currentSelectedProduct === 'combo-duo') {
+    const a1 = document.getElementById('aromaSelect1')?.value || 'Chá Branco';
+    const a2 = document.getElementById('aromaSelect2')?.value || 'Bamboo';
+    aromaDetails = `\n• Aromas Escolhidos: ${a1} + ${a2}`;
+  } else if (currentSelectedProduct === 'colecao-4') {
+    aromaDetails = `\n• Coleção Completa: Bamboo + Chá Branco + Bergamota + Elegance`;
+  }
+
+  // Checkout URLs mapped to each fragrance and bundle for Yampi
   const checkoutUrls = {
     'bamboo': '#',
     'cha-branco': '#',
-    'combo-duo': '#'
+    'bergamota': '#',
+    'elegance': '#',
+    'combo-duo': '#',
+    'colecao-4': '#'
   };
 
   const targetUrl = checkoutUrls[currentSelectedProduct] || '#';
@@ -304,10 +354,10 @@ function proceedToCheckout(type = 'online') {
   if (targetUrl !== '#') {
     window.location.href = targetUrl;
   } else {
-    // Elegant feedback informing user checkout is being connected
+    // Confirmation feedback showing chosen aromas and totals
     alert(
       `🛒 Redirecionando para o Checkout Seguro...\n\n` +
-      `Produto: ${product.name}\n` +
+      `Item: ${product.name}${aromaDetails}\n` +
       `Quantidade: ${currentQty}\n` +
       `Subtotal: R$ ${total}\n\n` +
       `Pronto para integrar ao checkout transparente da Yampi!`
