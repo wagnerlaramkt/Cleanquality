@@ -10,7 +10,7 @@ const PRODUCTS = {
     name: 'Difusor Bamboo 250ml',
     tag: '🍃 Frescor, Natureza & Sofisticação',
     price: 89.90,
-    oldPrice: 119.90,
+    oldPrice: 109.90,
     image: 'assets/images/card_bamboo.jpg',
     realImage: 'assets/images/real_product_bamboo.jpg',
     description: 'Fragrância fresca e envolvente inspirada na natureza. Presença marcante e equilibrada. Sabe aquele cheiro de hotel 5 estrelas quando você entra no lobby? Essa é a sensação do Bamboo.'
@@ -20,7 +20,7 @@ const PRODUCTS = {
     name: 'Difusor Chá Branco 250ml',
     tag: '🌸 Leveza, Elegância & Tranquilidade',
     price: 89.90,
-    oldPrice: 119.90,
+    oldPrice: 109.90,
     image: 'assets/images/card_cha_branco.jpg',
     description: 'Fragrância delicada e sofisticada, com sensação limpa, fresca e confortável. Transmite cuidado e equilíbrio sem dominar o ambiente.'
   },
@@ -29,7 +29,7 @@ const PRODUCTS = {
     name: 'Difusor Bergamota 250ml',
     tag: '🍋 Frescor, Energia & Personalidade',
     price: 89.90,
-    oldPrice: 119.90,
+    oldPrice: 109.90,
     image: 'assets/images/card_bergamota.jpg',
     description: 'Fragrância cítrica, vibrante e elegante. Traz uma sensação refrescante e iluminada ao ambiente, perfeita para quem busca energia e sofisticação.'
   },
@@ -38,25 +38,25 @@ const PRODUCTS = {
     name: 'Difusor Elegance 250ml',
     tag: '✨ Sofisticação, Aconchego & Exclusividade',
     price: 89.90,
-    oldPrice: 119.90,
+    oldPrice: 109.90,
     image: 'assets/images/card_elegance.jpg',
     description: 'Fragrância criada para transmitir a sensação de um ambiente refinado e acolhedor. Notas nobres e envolventes que impressionam com elegância.'
   },
   'combo-duo': {
     id: 'combo-duo',
     name: 'Kit 2 Difusores (Escolha seus 2 Aromas)',
-    tag: '👑 2 Unidades • R$ 84,95 cada',
-    price: 169.90,
-    oldPrice: 239.80,
+    tag: '⭐ 2 Unidades • R$ 79,95 cada',
+    price: 159.90,
+    oldPrice: 179.80,
     image: 'assets/images/catalog_presentation_4.png',
     description: 'Escolha quaisquer 2 fragrâncias exclusivas da Clean Quality (Bamboo, Chá Branco, Bergamota ou Elegance). Embalagem nobre especial para presente.'
   },
   'colecao-4': {
     id: 'colecao-4',
     name: 'Coleção Completa (4 Fragrâncias 250ml)',
-    tag: '🔥 4 Unidades • Todos os 4 Aromas',
-    price: 299.90,
-    oldPrice: 479.60,
+    tag: '👑 4 Unidades • R$ 72,47 cada',
+    price: 289.90,
+    oldPrice: 359.60,
     image: 'assets/images/hero_4_fragrancias.png',
     description: 'A experiência sensorial definitiva com a linha completa: Bamboo + Chá Branco + Bergamota + Elegance 250ml com varetas pretas de alta absorção.'
   }
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initStickyHeader();
   initSmoothAnchors();
+  initTestimonialsCarousel();
 });
 
 /* ==========================================================================
@@ -152,39 +153,72 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   3. STICKY HEADER & ACTIVE LINKS
+   3. STICKY HEADER & ACTIVE LINKS (SMART MOBILE SCROLL SHOW/HIDE)
    ========================================================================== */
 function initStickyHeader() {
   const header = document.getElementById('siteHeader');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  const drawer = document.getElementById('mobileDrawer');
+
+  if (!header) return;
+
+  let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollDelta = 6; // threshold to avoid jitter
 
   window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset;
+    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const isMobile = window.innerWidth <= 768;
 
-    // Header styling on scroll
-    if (scrollY > 50) {
-      header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.4)';
-    } else {
-      header.style.boxShadow = 'none';
+    // Do not toggle header if mobile drawer is currently open
+    if (drawer && drawer.classList.contains('open')) {
+      lastScrollY = currentScrollY;
+      return;
     }
 
-    // Active Section Detection
-    sections.forEach(section => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 120;
-      const sectionId = section.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
+    if (isMobile) {
+      if (currentScrollY <= 15) {
+        // At the very top of the page: always visible without shadow
+        header.classList.remove('header-hidden');
+        header.style.boxShadow = 'none';
+      } else if (currentScrollY > lastScrollY && (currentScrollY - lastScrollY > scrollDelta) && currentScrollY > 70) {
+        // Scrolling DOWN -> HIDE HEADER
+        header.classList.add('header-hidden');
+      } else if (currentScrollY < lastScrollY && (lastScrollY - currentScrollY > scrollDelta)) {
+        // Scrolling UP -> SHOW HEADER
+        header.classList.remove('header-hidden');
+        header.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.55)';
       }
-    });
-  });
+    } else {
+      // Desktop: sticky with shadow
+      header.classList.remove('header-hidden');
+      if (currentScrollY > 50) {
+        header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.4)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }
+
+    lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+
+    // Active Section Detection on Desktop
+    if (!isMobile) {
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 120;
+        const sectionId = section.getAttribute('id');
+
+        if (currentScrollY > sectionTop && currentScrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${sectionId}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+  }, { passive: true });
 }
 
 function initSmoothAnchors() {
@@ -363,6 +397,216 @@ function proceedToCheckout(type = 'online') {
       `Pronto para integrar ao checkout transparente da Yampi!`
     );
   }
+}
+
+/* ==========================================================================
+   6. TESTIMONIALS CAROUSEL (3 ON DESKTOP, 1 ON MOBILE, TOUCH & ARROWS)
+   ========================================================================== */
+function initTestimonialsCarousel() {
+  const slider = document.getElementById('testimonialSlider');
+  const track = document.getElementById('testimonialTrack');
+  const prevBtn = document.getElementById('testimonialPrev');
+  const nextBtn = document.getElementById('testimonialNext');
+  const dotsContainer = document.getElementById('testimonialDots');
+
+  if (!slider || !track) return;
+
+  const slides = track.querySelectorAll('.testimonial-slide');
+  const totalSlides = slides.length;
+  if (totalSlides === 0) return;
+
+  let currentIndex = 0;
+  let autoplayTimer = null;
+  let isDragging = false;
+  let startX = 0;
+
+  function getSlidesPerView() {
+    const width = window.innerWidth;
+    if (width <= 768) return 1;
+    if (width <= 1024) return 2;
+    return 3;
+  }
+
+  function getMaxIndex() {
+    const spv = getSlidesPerView();
+    return Math.max(0, totalSlides - spv);
+  }
+
+  function createDots() {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    const maxIndex = getMaxIndex();
+    const count = maxIndex + 1;
+
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('button');
+      dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Ir para depoimento ${i + 1}`);
+      dot.addEventListener('click', () => {
+        goToSlide(i);
+        resetAutoplay();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    if (!dotsContainer) return;
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentIndex);
+    });
+  }
+
+  function updateCarousel() {
+    const maxIndex = getMaxIndex();
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+    }
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    }
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const offset = -(currentIndex * slideWidth);
+    track.style.transform = `translateX(${offset}px)`;
+
+    updateDots();
+
+    if (prevBtn) {
+      prevBtn.style.opacity = currentIndex === 0 ? '0.35' : '1';
+      prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+    }
+    if (nextBtn) {
+      nextBtn.style.opacity = currentIndex >= maxIndex ? '0.35' : '1';
+      nextBtn.style.pointerEvents = currentIndex >= maxIndex ? 'none' : 'auto';
+    }
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    const maxIndex = getMaxIndex();
+    if (currentIndex >= maxIndex) {
+      currentIndex = 0; // Loop back
+    } else {
+      currentIndex++;
+    }
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    const maxIndex = getMaxIndex();
+    if (currentIndex <= 0) {
+      currentIndex = maxIndex; // Loop to end
+    } else {
+      currentIndex--;
+    }
+    updateCarousel();
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoplay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoplay();
+    });
+  }
+
+  // Touch Swipe & Mouse Drag Support
+  function touchStart(event) {
+    isDragging = true;
+    startX = getPositionX(event);
+    slider.style.cursor = 'grabbing';
+    clearInterval(autoplayTimer);
+  }
+
+  function touchMove(event) {
+    if (!isDragging) return;
+  }
+
+  function touchEnd(event) {
+    if (!isDragging) return;
+    isDragging = false;
+    slider.style.cursor = 'grab';
+    const endX = getPositionX(event);
+    const diff = endX - startX;
+
+    if (diff < -40) {
+      // Swiped Left -> Next
+      const maxIndex = getMaxIndex();
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      updateCarousel();
+    } else if (diff > 40) {
+      // Swiped Right -> Prev
+      const maxIndex = getMaxIndex();
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = maxIndex;
+      }
+      updateCarousel();
+    }
+
+    resetAutoplay();
+  }
+
+  function getPositionX(event) {
+    return event.type.includes('mouse')
+      ? event.pageX
+      : (event.changedTouches ? event.changedTouches[0].clientX : event.touches[0].clientX);
+  }
+
+  slider.addEventListener('touchstart', touchStart, { passive: true });
+  slider.addEventListener('touchmove', touchMove, { passive: true });
+  slider.addEventListener('touchend', touchEnd, { passive: true });
+
+  slider.addEventListener('mousedown', touchStart);
+  slider.addEventListener('mousemove', touchMove);
+  slider.addEventListener('mouseup', touchEnd);
+  slider.addEventListener('mouseleave', () => {
+    if (isDragging) touchEnd({ pageX: startX });
+  });
+
+  // Autoplay
+  function startAutoplay() {
+    autoplayTimer = setInterval(() => {
+      nextSlide();
+    }, 5500);
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplayTimer);
+    startAutoplay();
+  }
+
+  // Handle Window Resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      createDots();
+      updateCarousel();
+    }, 150);
+  });
+
+  // Initial creation & update
+  createDots();
+  updateCarousel();
+  startAutoplay();
 }
 
 
