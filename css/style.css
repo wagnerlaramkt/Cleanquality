@@ -6,13 +6,13 @@
 /* --- 1. CSS VARIABLES & THEME TOKENS --- */
 :root {
   /* Brand Palette */
-  --color-primary-dark: #0D0C0A;     /* Deep Onyx / Charcoal Black */
-  --color-secondary-dark: #171512;   /* Card Dark Background */
-  --color-dark-surface: #201D19;     /* Elevated Dark Surface */
+  --color-primary-dark: #1D1916;     /* Clean Velvet Espresso / Warm Luxury Dark */
+  --color-secondary-dark: #27221E;   /* Card Dark Background / Warm Mocha Surface */
+  --color-dark-surface: #322B25;     /* Elevated Dark Surface */
   
-  --color-offwhite-bg: #F8F6F2;      /* Pure Luxury Warm Off-White / Linen */
-  --color-cream-surface: #F0EDE6;    /* Card Light Background */
-  --color-warm-beige: #E6E0D5;       /* Border / Subtle Separator */
+  --color-offwhite-bg: #FAF8F5;      /* Pure Luxury Warm Off-White / Crisp Linen */
+  --color-cream-surface: #F4F0E8;    /* Card Light Background / Soft Cream */
+  --color-warm-beige: #E8E2D7;       /* Border / Subtle Separator */
   
   /* Gold Metallics */
   --gold-primary: #C5A059;
@@ -24,8 +24,8 @@
   --gold-border-gradient: linear-gradient(135deg, rgba(229,195,120,0.6), rgba(197,160,89,0.2));
   
   /* Text Colors */
-  --text-dark: #161513;
-  --text-dark-muted: #5C5850;
+  --text-dark: #211D19;
+  --text-dark-muted: #635D54;
   --text-white: #FFFFFF;
   --text-white-muted: #C8C3BA;
   
@@ -38,12 +38,12 @@
   --font-editorial: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  /* Transitions & Shadows */
+  /* Transitions & Shadows (Refined Soft Luxury) */
   --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
-  --shadow-luxury: 0 16px 40px rgba(13, 12, 10, 0.08);
-  --shadow-gold: 0 8px 28px rgba(197, 160, 89, 0.28);
-  --shadow-dark-card: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --shadow-subtle: 0 4px 18px rgba(29, 25, 22, 0.04);
+  --shadow-luxury: 0 12px 30px rgba(29, 25, 22, 0.05), 0 2px 6px rgba(29, 25, 22, 0.02);
+  --shadow-gold: 0 8px 22px rgba(197, 160, 89, 0.22);
+  --shadow-dark-card: 0 10px 24px rgba(0, 0, 0, 0.18);
   
   /* Layout */
   --container-max-width: 1200px;
@@ -285,7 +285,7 @@ p {
 
 /* --- 5. TOP ANNOUNCEMENT BAR --- */
 .announcement-bar {
-  background-color: #080706;
+  background-color: #161310;
   color: #E6E0D5;
   font-size: 0.78rem;
   border-bottom: 1px solid rgba(197, 160, 89, 0.2);
@@ -327,7 +327,7 @@ p {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(13, 12, 10, 0.94);
+  background-color: rgba(29, 25, 22, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(197, 160, 89, 0.15);
@@ -471,9 +471,9 @@ p {
   right: -100%;
   width: 300px;
   height: 100vh;
-  background-color: #12100C;
+  background-color: #1D1916;
   border-left: 1px solid rgba(197, 160, 89, 0.25);
-  box-shadow: -10px 0 40px rgba(0,0,0,0.8);
+  box-shadow: -6px 0 28px rgba(0, 0, 0, 0.35);
   padding: 30px 24px;
   display: flex;
   flex-direction: column;
@@ -666,7 +666,7 @@ p {
   position: relative;
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
   border: 1px solid rgba(197, 160, 89, 0.35);
 }
 
@@ -686,7 +686,7 @@ p {
   position: absolute;
   bottom: 24px;
   left: 20px;
-  background: rgba(13, 12, 10, 0.82);
+  background: rgba(29, 25, 22, 0.78);
   border: 1px solid rgba(197, 160, 89, 0.4);
   padding: 12px 18px;
   border-radius: var(--border-radius-sm);
@@ -712,9 +712,9 @@ p {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(13, 12, 10, 0.82);
+  background: rgba(29, 25, 22, 0.78);
   border: 1px solid rgba(197, 160, 89, 0.35);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
   padding: 8px 16px;
   border-radius: var(--border-radius-sm);
   font-family: var(--font-editorial);
@@ -731,7 +731,7 @@ p {
 
 /* --- 8. TRUST BAR --- */
 .trust-bar {
-  background-color: #171512;
+  background-color: var(--color-secondary-dark);
   color: #FFFFFF;
   padding: 26px 0;
   border-top: 1px solid rgba(197, 160, 89, 0.2);
@@ -851,7 +851,7 @@ p {
   left: 0;
   right: 0;
   padding: 16px 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(29, 25, 22, 0.75) 0%, transparent 100%);
 }
 
 .mosaic-overlay-text span {
@@ -887,7 +887,7 @@ p {
   left: 12px;
   font-size: 0.68rem;
   font-weight: 600;
-  background: rgba(13, 12, 10, 0.75);
+  background: rgba(29, 25, 22, 0.8);
   color: var(--gold-bright);
   padding: 4px 10px;
   border-radius: 4px;
@@ -1277,33 +1277,33 @@ p {
 }
 
 .offer-card {
-  background-color: #161412;
+  background-color: #241F1A;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 38px 28px 32px;
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
   transition: var(--transition-smooth);
 }
 
 .offer-card:hover {
   transform: translateY(-6px);
   border-color: rgba(197, 160, 89, 0.4);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
 }
 
 /* Featured Card (Kit 2 Difusores - Destaque Central) */
 .offer-card-featured {
   border: 2px solid var(--gold-primary);
-  background: linear-gradient(180deg, #1C1914 0%, #14120F 100%);
-  box-shadow: 0 20px 55px rgba(197, 160, 89, 0.22), 0 0 0 1px rgba(197, 160, 89, 0.35);
+  background: linear-gradient(180deg, #2B251F 0%, #201C17 100%);
+  box-shadow: 0 16px 40px rgba(197, 160, 89, 0.16), 0 0 0 1px rgba(197, 160, 89, 0.35);
 }
 
 .offer-card-featured:hover {
   border-color: var(--gold-bright);
-  box-shadow: 0 24px 60px rgba(197, 160, 89, 0.32), 0 0 0 1px var(--gold-bright);
+  box-shadow: 0 20px 48px rgba(197, 160, 89, 0.24), 0 0 0 1px var(--gold-bright);
 }
 
 /* Badges Flutuantes Superiores */
@@ -1592,7 +1592,7 @@ p {
   border-radius: var(--border-radius-md);
   overflow: hidden;
   border: 1px solid rgba(197, 160, 89, 0.3);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3);
 }
 
 .benefit-showcase-img {
@@ -1606,7 +1606,7 @@ p {
   bottom: 24px;
   left: 24px;
   right: 24px;
-  background: rgba(13, 12, 10, 0.85);
+  background: rgba(29, 25, 22, 0.82);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(197, 160, 89, 0.4);
   padding: 18px 24px;
@@ -1995,7 +1995,7 @@ p {
   border-radius: var(--border-radius-md);
   overflow: hidden;
   border: 1px solid rgba(197, 160, 89, 0.3);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3);
 }
 
 .why-img {
@@ -2008,9 +2008,9 @@ p {
   position: absolute;
   top: 24px;
   right: 24px;
-  background: rgba(13, 12, 10, 0.82);
+  background: rgba(29, 25, 22, 0.78);
   border: 1px solid rgba(197, 160, 89, 0.35);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
   padding: 8px 16px;
   border-radius: var(--border-radius-sm);
   font-family: var(--font-editorial);
@@ -2143,7 +2143,7 @@ p {
   background-color: var(--color-primary-dark);
   border-radius: var(--border-radius-lg);
   border: 1px solid rgba(197, 160, 89, 0.4);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   overflow: hidden;
@@ -2232,7 +2232,7 @@ p {
 
 /* BRAND QUOTE STRIP */
 .brand-quote-strip {
-  background-color: #080706;
+  background-color: #161310;
   padding: 40px 0;
   text-align: center;
   border-top: 1px solid rgba(197, 160, 89, 0.2);
@@ -2256,7 +2256,7 @@ p {
 
 /* --- 17. FOOTER --- */
 .site-footer {
-  background-color: #0B0A08;
+  background-color: #161310;
   color: #FFFFFF;
   padding: 80px 0 30px;
 }
@@ -2385,7 +2385,7 @@ p {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(20, 17, 15, 0.6);
   backdrop-filter: blur(8px);
   z-index: 3000;
   display: flex;
@@ -2407,7 +2407,7 @@ p {
   width: 100%;
   max-width: 520px;
   border-radius: var(--border-radius-lg);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.26);
   border: 1px solid var(--gold-primary);
   position: relative;
   overflow: hidden;
@@ -2870,7 +2870,7 @@ p {
 
   .image-frame-luxury {
     border-radius: var(--border-radius-md) !important;
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32) !important;
     width: 100% !important;
   }
 
